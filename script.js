@@ -1,7 +1,5 @@
 "use strict";
 
-console.log("fucku");
-
 // leap year
 // 1. check if it's divisible by 4
 // - false : not a leap year
@@ -42,4 +40,4 @@ function isLeapYear(year) {
   return result;
 }
 
-console.log(isLeapYear(404));
+console.log(isLeapYear(2000));
