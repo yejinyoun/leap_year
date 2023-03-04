@@ -16,18 +16,25 @@ console.log("fucku");
 // - false : not a leap year
 
 function isLeapYear(year) {
-  const result = divisibleBy4(year);
+  let result = divisibleBy4(year);
   function divisibleBy4(year) {
     if (year % 4 !== 0) {
       return false;
     } else {
-      return true;
+      return divisibleBy100(year);
+      function divisibleBy100(year) {
+        if (year % 100 !== 0) {
+          return true;
+        } else {
+          return false;
+        }
+      }
     }
   }
-  function divisibleBy100() {}
+
   function divisibleBy400() {}
 
   return console.log(result);
 }
 
-isLeapYear(105);
+isLeapYear(300);
