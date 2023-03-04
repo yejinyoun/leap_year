@@ -26,15 +26,20 @@ function isLeapYear(year) {
         if (year % 100 !== 0) {
           return true;
         } else {
-          return false;
+          return divisibleBy400(year);
+          function divisibleBy400(year) {
+            if (year % 400 === 0) {
+              return true;
+            } else {
+              return false;
+            }
+          }
         }
       }
     }
   }
 
-  function divisibleBy400() {}
-
-  return console.log(result);
+  return result;
 }
 
-isLeapYear(300);
+console.log(isLeapYear(404));
