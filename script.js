@@ -14,3 +14,20 @@ console.log("fucku");
 // 3. check if it's divisible by 400
 // - true : yes leap year
 // - false : not a leap year
+
+function isLeapYear(year) {
+  const result = divisibleBy4(year);
+  function divisibleBy4(year) {
+    if (year % 4 !== 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+  function divisibleBy100() {}
+  function divisibleBy400() {}
+
+  return console.log(result);
+}
+
+isLeapYear(105);
